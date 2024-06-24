@@ -1,0 +1,8 @@
+server:
+  port: 9081
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/Products
+  application:
+    name: VEHICLE-SERVICE

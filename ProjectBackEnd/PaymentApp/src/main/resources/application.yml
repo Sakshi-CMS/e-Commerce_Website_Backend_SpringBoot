@@ -1,0 +1,29 @@
+server:
+  port: 9009
+spring:
+  data:
+    mongodb:
+      database: PaymentDetail
+      uri: mongodb://localhost:27017/
+  application:
+    name: PAYMENT-SERVICE
+razorpay1:
+  secretid: rzp_test_3oiHYRXdoQo1zb
+  secretkey: z9m5hHfhrVcx0Jh1YSUQwoN4
+razorpay2:
+  secretid: rzp_test_3oiHYRXdoQo1zb
+  secretkey: z9m5hHfhrVcx0Jh1YSUQwoN4
+
+razorpay:
+  threshold: 10000
+
+cloud:
+  gateway:
+    default-filters:
+      - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+    globalcors:
+      corsConfigurations:
+        '[/**]':
+          allowedOrigins: "*"
+          allowedMethods: "*"
+          allowedHeaders: "*"

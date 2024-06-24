@@ -1,0 +1,10 @@
+EurecaServer:
+  image: eureca-service
+  build: EurecaServer/
+  restart: always
+  network_mode: host
+
+  enviroment:
+    EUREKA_SERVER_PORT: 8762
+  ports:
+    -8762:8762
